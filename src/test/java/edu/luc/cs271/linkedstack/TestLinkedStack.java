@@ -82,15 +82,13 @@ public class TestLinkedStack {
     final List<String> list = fixture.asList();
     assertEquals(2, list.size());
     assertEquals(Arrays.asList(value2, value1), list);
-    List<String> list2 = fixture.asList();
-    assertEquals(2, list2.size());
-    list2 = fixture.asList();//reused previous variable list2
+    final List<String> list2 = fixture.asList();
     assertEquals(2, list2.size());
   }
+
   @Test
   public void testAsFifoListEmpty() {
     assertEquals(0, fixture.asFifoList().size());
-    ;
   }
 
   @Test
